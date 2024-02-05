@@ -30,8 +30,7 @@ void LOW(void)
    bob=1;                       
 } 
 int main(void)
-{
-                                         // Statement to set LCD to CYAN
+{  
     PIR.fall(&LOW);                       
     segment.clear();                
     segment.setColon(0);            
@@ -40,9 +39,10 @@ int main(void)
     
     for(;;)
     { 
+                                                       // Statement to set LCD to CYAN
        if(bob==1)        
        {  
-                                          // Statement to set LCD to MAROON                             
+                                                      // Statement to set LCD to MAROON                             
           segment.writeRaw(0,0x6d);    
           segment.writeRaw(1,0x78);
           segment.writeRaw(2,0x3f);
